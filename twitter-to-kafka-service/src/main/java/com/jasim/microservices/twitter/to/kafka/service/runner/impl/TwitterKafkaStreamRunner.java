@@ -1,6 +1,7 @@
 package com.jasim.microservices.twitter.to.kafka.service.runner.impl;
 
-import com.jasim.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+
+import com.jasim.microservices.config.TwitterToKafkaServiceConfigData;
 import com.jasim.microservices.twitter.to.kafka.service.listener.TwitterStatusKafkaListener;
 import com.jasim.microservices.twitter.to.kafka.service.runner.StreamRunner;
 import org.slf4j.Logger;
@@ -12,7 +13,6 @@ import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 
 import javax.annotation.PreDestroy;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 @Component

@@ -1,16 +1,20 @@
 package com.jasim.microservices.twitter.to.kafka.service;
 
-import com.jasim.microservices.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+
+import com.jasim.microservices.config.TwitterToKafkaServiceConfigData;
 import com.jasim.microservices.twitter.to.kafka.service.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
 
 @SpringBootApplication
+@ComponentScan(basePackages = "com.jasim.microservices")
 public class TwitterToKafkaServiceApplication implements CommandLineRunner {
 
     private  static final Logger LOG = LoggerFactory.getLogger(TwitterToKafkaServiceApplication.class);
